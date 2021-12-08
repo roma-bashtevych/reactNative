@@ -10,7 +10,8 @@ export default function App() {
         { text: 'Learn English', key: '2' },
         { text: 'Buy two eggs', key: '3' },
         { text: 'Become a millionaire', key: '4' }
-    ])
+    ]);
+
     const addHandler = (value) => {
         if (value !== '') {
             setListOfItems((list) => {
@@ -22,13 +23,14 @@ export default function App() {
         } else {
             Alert.alert('Попередження!', 'Будь ласка введіть що маєте зробити')
         }
-    }
+    };
 
     const deleteHandler = (key) => {
         setListOfItems((list) => {
             return list.filter(item => item.key !== key)
         })
-    }
+    };
+
     return (
         <View>
             <Header/>
